@@ -1,0 +1,1545 @@
+Composition {
+	CurrentTime = 1001,
+	RenderRange = { 1001, 1200 },
+	GlobalRange = { 1001, 1200 },
+	CurrentID = 57,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "Fusion Studio 9.0.2 build 15",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	AutoRenderRange = true,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		ChannelBooleans1_1 = ChannelBoolean {
+			Inputs = {
+				ToRed = Input { Value = 4, },
+				ToGreen = Input { Value = 4, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Instance_FastNoise1_1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, -72.6203 } },
+		},
+		Rectangle2 = RectangleMask {
+			Inputs = {
+				SoftEdge = Input { Value = 0.2, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Center = Input { Value = { 0.5, 1 }, },
+				Width = Input { Value = 1.44193548387097, },
+				Height = Input { Value = 0.0870967741935486, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1187.83, -21.0821 } },
+		},
+		BrightnessContrast1 = BrightnessContrast {
+			Inputs = {
+				Brightness = Input { Value = -0.5, },
+				Input = Input {
+					SourceOp = "ChannelBooleans1_1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, -26.7891 } },
+		},
+		ChannelBooleans1 = ChannelBoolean {
+			Inputs = {
+				ToRed = Input { Value = 4, },
+				ToBlue = Input { Value = 4, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "FastNoise1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Instance_FastNoise1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, -126.62 } },
+		},
+		CustomVertex3D1LUT3 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		FastNoise1_1 = FastNoise {
+			CustomData = {
+				Settings = {
+					[1] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Height = Input { Value = 512 },
+									Width = Input { Value = 512 }
+								},
+								Name = "FastNoise1",
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[2] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									Inverted = Input { Value = 1 },
+									Width = Input { Value = 512 },
+									GlobalOut = Input { Value = 1100 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Discontinuous = Input { Value = 1 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Depth = Input { Value = 3 },
+									Detail = Input { Value = 4.23809523809524 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[3] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									XScale = Input { Value = 0.666666666666667 },
+									Inverted = Input { Value = 1 },
+									Contrast = Input { Value = 1.72380952380952 },
+									GlobalIn = Input { Value = 1001 },
+									Width = Input { Value = 512 },
+									Depth = Input { Value = 3 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									Discontinuous = Input { Value = 1 },
+									GlobalOut = Input { Value = 1100 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									SeetheRate = Input { Value = 0.0714285714285714 },
+									Detail = Input { Value = 5.57142857142857 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					}
+				}
+			},
+			Inputs = {
+				GlobalIn = Input { Value = 1001, },
+				GlobalOut = Input { Value = 1200, },
+				Width = Input { Value = 256, },
+				Height = Input { Value = 512, },
+				Depth = Input { Value = 3, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input {
+					Value = { 0.5, 60 },
+					Expression = "Point(0.5, time*0.05)",
+				},
+				Detail = Input { Value = 3.16, },
+				Contrast = Input { Value = 6.33, },
+				Brightness = Input { Value = -2, },
+				LockXY = Input { Value = 0, },
+				XScale = Input { Value = 50, },
+				YScale = Input { Value = 1.03, },
+				SeetheRate = Input { Value = 0.5, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -254.589 } },
+		},
+		Instance_FastNoise1_1 = FastNoise {
+			CustomData = {
+				Settings = {
+					[1] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Height = Input { Value = 512 },
+									Width = Input { Value = 512 }
+								},
+								Name = "FastNoise1",
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[2] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									Inverted = Input { Value = 1 },
+									Width = Input { Value = 512 },
+									GlobalOut = Input { Value = 1100 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Discontinuous = Input { Value = 1 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Depth = Input { Value = 3 },
+									Detail = Input { Value = 4.23809523809524 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[3] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									XScale = Input { Value = 0.666666666666667 },
+									Inverted = Input { Value = 1 },
+									Contrast = Input { Value = 1.72380952380952 },
+									GlobalIn = Input { Value = 1001 },
+									Width = Input { Value = 512 },
+									Depth = Input { Value = 3 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									Discontinuous = Input { Value = 1 },
+									GlobalOut = Input { Value = 1100 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									SeetheRate = Input { Value = 0.0714285714285714 },
+									Detail = Input { Value = 5.57142857142857 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					}
+				}
+			},
+			SourceOp = "FastNoise1",
+			Inputs = {
+				["Gamut.ColorSpaceNest"] = Input { },
+				["Gamut.GammaSpaceNest"] = Input { },
+				Center = Input {
+					Value = { 0.5, 24 },
+					Expression = "Point(0.5, time*0.02)"
+				},
+				Seethe = Input { Value = 2.693, },
+				StartEndRenderScripts = Input { },
+				EffectMask = Input { },
+				NoiseBrightnessMap = Input { },
+				NoiseDetailMap = Input { }
+			},
+			ViewInfo = OperatorInfo { Pos = { 614.456, -72.6203 } },
+		},
+		Blur2 = Blur {
+			CtrlWZoom = false,
+			Inputs = {
+				XBlurSize = Input { Value = 0, },
+				Input = Input {
+					SourceOp = "add",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1001.93, 174 } },
+		},
+		Transform1 = Transform {
+			Inputs = {
+				ProcessGreen = Input { Value = 0, },
+				ProcessBlue = Input { Value = 0, },
+				Center = Input { Value = { 0.5, 0.527803260179239 }, },
+				Input = Input {
+					SourceOp = "BrightnessContrast2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -165.381 } },
+		},
+		CustomVertex3D1LUT1 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		Blur1 = Blur {
+			Inputs = {
+				Blend = Input { Value = 0.462, },
+				XBlurSize = Input { Value = 21.8, },
+				Input = Input {
+					SourceOp = "ColorCorrector1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -67.3269 } },
+		},
+		Background1 = Background {
+			CustomData = {
+				Settings = {
+					[1] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Height = Input { Value = 1080 },
+									Width = Input { Value = 1920 }
+								},
+								Name = "Background1",
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[2] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									Type = Input { Value = FuID { "Horizontal" } },
+									TopRightGreen = Input { Value = 1 },
+									Width = Input { Value = 1920 },
+									TopRightRed = Input { Value = 1 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Height = Input { Value = 1080 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									TopRightBlue = Input { Value = 1 },
+									Depth = Input { Value = 3 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[3] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									BottomRightGreen = Input { Value = 1 },
+									Type = Input { Value = FuID { "Corner" } },
+									TopRightGreen = Input { Value = 1 },
+									Width = Input { Value = 1920 },
+									TopRightRed = Input { Value = 1 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Height = Input { Value = 1080 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									TopLeftRed = Input { Value = 1 },
+									Depth = Input { Value = 3 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[4] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									BottomRightGreen = Input { Value = 1 },
+									Type = Input { Value = FuID { "Vertical" } },
+									Height = Input { Value = 1080 },
+									TopRightGreen = Input { Value = 1 },
+									TopLeftRed = Input { Value = 1 },
+									Width = Input { Value = 1920 },
+									TopRightRed = Input { Value = 1 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									TopLeftBlue = Input { Value = 1 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									GlobalOut = Input { Value = 1100 },
+									TopLeftGreen = Input { Value = 1 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[5] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									BottomRightGreen = Input { Value = 1 },
+									TopRightGreen = Input { Value = 1 },
+									Width = Input { Value = 1920 },
+									TopRightRed = Input { Value = 1 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Height = Input { Value = 1080 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									TopLeftRed = Input { Value = 1 },
+									Depth = Input { Value = 3 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 550, 82.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[6] = {
+						Tools = ordered() {
+							Background1 = Background {
+								Inputs = {
+									BottomRightGreen = Input { Value = 1 },
+									TopRightGreen = Input { Value = 1 },
+									Width = Input { Value = 1920 },
+									TopRightRed = Input { Value = 1 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									Height = Input { Value = 1080 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									TopLeftRed = Input { Value = 1 },
+									GlobalOut = Input { Value = 1100 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 605, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					}
+				}
+			},
+			Inputs = {
+				GlobalIn = Input { Value = 1001, },
+				GlobalOut = Input { Value = 1200, },
+				Width = Input { Value = 64, },
+				Height = Input { Value = 256, },
+				Depth = Input { Value = 3, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Type = Input { Value = FuID { "Vertical" }, },
+				TopLeftRed = Input {
+					Value = 0.525007053837844,
+					Expression = "ctv.Point1.X",
+				},
+				TopLeftGreen = Input {
+					Value = -0.0165005871947797,
+					Expression = "ctv.Point1.Y",
+				},
+				TopLeftBlue = Input {
+					Value = -0.22424252899218,
+					Expression = "ctv.Point1.Z",
+				},
+				BottomLeftRed = Input {
+					Value = -0.470672946389979,
+					Expression = "ctv.Point2.X",
+				},
+				BottomLeftGreen = Input {
+					Value = -0.597601334826018,
+					Expression = "ctv.Point2.Y",
+				},
+				BottomLeftBlue = Input {
+					Value = 0.915140763191663,
+					Expression = "ctv.Point2.Z",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 720.857, 174 } },
+		},
+		add = ChannelBoolean {
+			NameSet = true,
+			Inputs = {
+				Operation = Input { Value = 1, },
+				Background = Input {
+					SourceOp = "Background1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "mask",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 891.933, 174 } },
+		},
+		ImagePlane3D1 = ImagePlane3D {
+			Inputs = {
+				["Transform3DOp.ScaleLock"] = Input { Value = 0, },
+				["Transform3DOp.Scale.X"] = Input { Value = 0.001, },
+				["Transform3DOp.Scale.Y"] = Input { Value = 0.001, },
+				["Transform3DOp.Scale.Z"] = Input { Value = 0.001, },
+				["SurfacePlaneInputs.SizeLock"] = Input { Value = 0, },
+				["SurfacePlaneInputs.SubdivisionWidth"] = Input { Value = 64, },
+				["SurfacePlaneInputs.SubdivisionHeight"] = Input { Value = 128, },
+				["SurfacePlaneInputs.ObjectID.ObjectID"] = Input { Value = 1, },
+				MaterialInput = Input {
+					SourceOp = "BrightnessContrast3",
+					Source = "Output",
+				},
+				["MtlStdInputs.MaterialID"] = Input { Value = 1, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, 51.6624 } },
+		},
+		mask = BrightnessContrast {
+			NameSet = true,
+			Inputs = {
+				Gain = Input { Value = 0, },
+				Input = Input {
+					SourceOp = "amplitude",
+					Source = "Output",
+				},
+				EffectMask = Input {
+					SourceOp = "Rectangle1",
+					Source = "Mask",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, 99.9873 } },
+		},
+		ColorCorrector1 = ColorCorrector {
+			Inputs = {
+				CorrectionRange = Input { Value = 3, },
+				WheelRangeDummy1 = Input { Value = 3, },
+				WheelSaturation2 = Input { Value = 1.889, },
+				WheelTintAngle2 = Input { Value = 0.611313583478753, },
+				WheelTintLength2 = Input { Value = 1, },
+				HighlightsRGBGain = Input { Value = 1.103, },
+				SuppressionRangeDummy = Input { Value = 3, },
+				ColorRanges = Input {
+					Value = ColorCurves {
+						Curves = {
+							{
+								Points = {
+									{ 0, 1 },
+									{ 0.4, 0.2 },
+									{ 0.6, 0 },
+									{ 1, 0 }
+								}
+							},
+							{
+								Points = {
+									{ 0, 0 },
+									{ 0.4, 0 },
+									{ 0.6, 0.2 },
+									{ 1, 1 }
+								}
+							}
+						}
+					},
+				},
+				HistogramIgnoreTransparent = Input { Value = 1, },
+				Input = Input {
+					SourceOp = "Transform2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -98.4347 } },
+		},
+		CustomVertex3D1LUT4 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		Transform2 = Transform {
+			Inputs = {
+				ProcessRed = Input { Value = 0, },
+				ProcessGreen = Input { Value = 0, },
+				Center = Input { Value = { 0.5, 0.488846940935714 }, },
+				Input = Input {
+					SourceOp = "Transform1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -135.219 } },
+		},
+		FastNoise1 = FastNoise {
+			CustomData = {
+				Settings = {
+					[1] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Height = Input { Value = 512 },
+									Width = Input { Value = 512 }
+								},
+								Name = "FastNoise1",
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[2] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									Inverted = Input { Value = 1 },
+									Width = Input { Value = 512 },
+									GlobalOut = Input { Value = 1100 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Discontinuous = Input { Value = 1 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Depth = Input { Value = 3 },
+									Detail = Input { Value = 4.23809523809524 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[3] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									XScale = Input { Value = 0.666666666666667 },
+									Inverted = Input { Value = 1 },
+									Contrast = Input { Value = 1.72380952380952 },
+									GlobalIn = Input { Value = 1001 },
+									Width = Input { Value = 512 },
+									Depth = Input { Value = 3 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									Discontinuous = Input { Value = 1 },
+									GlobalOut = Input { Value = 1100 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									SeetheRate = Input { Value = 0.0714285714285714 },
+									Detail = Input { Value = 5.57142857142857 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					}
+				}
+			},
+			Inputs = {
+				GlobalIn = Input { Value = 1001, },
+				GlobalOut = Input { Value = 1200, },
+				Width = Input { Value = 64, },
+				Height = Input { Value = 256, },
+				Depth = Input { Value = 3, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Center = Input {
+					Value = { 0.5, 24 },
+					Expression = "Point(0.5, time*0.02)",
+				},
+				Detail = Input { Value = 6.58, },
+				Contrast = Input { Value = 1.513, },
+				XScale = Input { Value = 0.722, },
+				SeetheRate = Input { Value = 0.162, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, -194.62 } },
+		},
+		Displace3D1 = Displace3D {
+			CtrlWZoom = false,
+			Inputs = {
+				SceneInput = Input {
+					SourceOp = "ctv",
+					Source = "Output",
+				},
+				Channel = Input { Value = 6, },
+				Scale = Input { Value = 1, },
+				Input = Input {
+					SourceOp = "Blur2",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, 174 } },
+		},
+		BrightnessContrast3 = BrightnessContrast {
+			Inputs = {
+				Gain = Input { Value = 10, },
+				Input = Input {
+					SourceOp = "Blur1",
+					Source = "Output",
+				},
+				EffectMask = Input {
+					SourceOp = "Rectangle2",
+					Source = "Mask",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -21.0821 } },
+		},
+		BrightnessContrast2 = BrightnessContrast {
+			Inputs = {
+				Alpha = Input { Value = 1, },
+				ClipBlack = Input { Value = 1, },
+				ClipWhite = Input { Value = 1, },
+				Input = Input {
+					SourceOp = "FastNoise1_1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, -213.407 } },
+		},
+		amplitude = BrightnessContrast {
+			NameSet = true,
+			Inputs = {
+				Gain = Input { Value = 0.2968, },
+				Input = Input {
+					SourceOp = "BrightnessContrast1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 906.456, 38.9367 } },
+		},
+		Rectangle1 = RectangleMask {
+			Inputs = {
+				SoftEdge = Input { Value = 0.8, },
+				Invert = Input { Value = 1, },
+				MaskWidth = Input { Value = 1920, },
+				MaskHeight = Input { Value = 1080, },
+				PixelAspect = Input { Value = { 1, 1 }, },
+				ClippingMode = Input { Value = FuID { "None" }, },
+				Center = Input { Value = { 0.5, 0.836900262898456 }, },
+				Width = Input { Value = 2.00065359477124, },
+				Height = Input { Value = 0.905233322379231, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 740.492, 99.9873 } },
+		},
+		Instance_FastNoise1 = FastNoise {
+			CustomData = {
+				Settings = {
+					[1] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Depth = Input { Value = 3 },
+									GlobalOut = Input { Value = 1100 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Height = Input { Value = 512 },
+									Width = Input { Value = 512 }
+								},
+								Name = "FastNoise1",
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[2] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									Inverted = Input { Value = 1 },
+									Width = Input { Value = 512 },
+									GlobalOut = Input { Value = 1100 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									GlobalIn = Input { Value = 1001 },
+									Discontinuous = Input { Value = 1 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									Depth = Input { Value = 3 },
+									Detail = Input { Value = 4.23809523809524 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					},
+					[3] = {
+						Tools = ordered() {
+							FastNoise1 = FastNoise {
+								Inputs = {
+									XScale = Input { Value = 0.666666666666667 },
+									Inverted = Input { Value = 1 },
+									Contrast = Input { Value = 1.72380952380952 },
+									GlobalIn = Input { Value = 1001 },
+									Width = Input { Value = 512 },
+									Depth = Input { Value = 3 },
+									["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" } },
+									Discontinuous = Input { Value = 1 },
+									GlobalOut = Input { Value = 1100 },
+									Height = Input { Value = 512 },
+									Gradient = Input {
+										Value = Gradient {
+											Colors = {
+												[0] = { 0, 0, 0, 1 },
+												[1] = { 1, 1, 1, 1 }
+											}
+										}
+									},
+									SeetheRate = Input { Value = 0.0714285714285714 },
+									Detail = Input { Value = 5.57142857142857 }
+								},
+								CtrlWZoom = false,
+								ViewInfo = OperatorInfo { Pos = { 660, 49.5 } },
+								CustomData = {
+								}
+							}
+						}
+					}
+				}
+			},
+			SourceOp = "FastNoise1",
+			Inputs = {
+				["Gamut.ColorSpaceNest"] = Input { },
+				["Gamut.GammaSpaceNest"] = Input { },
+				Center = Input {
+					Value = { 0.5, 24 },
+					Expression = "Point(0.5, time*0.02)"
+				},
+				Seethe = Input { Value = 1.886, },
+				StartEndRenderScripts = Input { },
+				EffectMask = Input { },
+				NoiseBrightnessMap = Input { },
+				NoiseDetailMap = Input { }
+			},
+			ViewInfo = OperatorInfo { Pos = { 785.456, -126.62 } },
+		},
+		ctv = CustomVertex3D {
+			NameSet = true,
+			Inputs = {
+				SceneInput = Input {
+					SourceOp = "ImagePlane3D1",
+					Source = "Output",
+				},
+				["Point1.X"] = Input { Value = 0.525007053837844, },
+				["Point1.Y"] = Input { Value = -0.0165005871947797, },
+				["Point1.Z"] = Input { Value = -0.22424252899218, },
+				["Point2.Nest"] = Input { Value = 1, },
+				["Point2.X"] = Input { Value = -0.470672946389979, },
+				["Point2.Y"] = Input { Value = -0.597601334826018, },
+				["Point2.Z"] = Input { Value = 0.915140763191663, },
+				LUT1 = Input {
+					SourceOp = "CustomVertex3D1LUT1",
+					Source = "Value",
+				},
+				LUT2 = Input {
+					SourceOp = "CustomVertex3D1LUT2",
+					Source = "Value",
+				},
+				LUT3 = Input {
+					SourceOp = "CustomVertex3D1LUT3",
+					Source = "Value",
+				},
+				LUT4 = Input {
+					SourceOp = "CustomVertex3D1LUT4",
+					Source = "Value",
+				},
+				PointControls = Input { Value = 1, },
+				ShowPoint3 = Input { Value = 0, },
+				ShowPoint4 = Input { Value = 0, },
+				ShowPoint5 = Input { Value = 0, },
+				ShowPoint6 = Input { Value = 0, },
+				ShowPoint7 = Input { Value = 0, },
+				ShowPoint8 = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 1295.94, 110.892 } },
+		},
+		CustomVertex3D1LUT2 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		}
+	},
+	Views = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 1,
+			Left = 0,
+			Top = 27,
+			Width = 817,
+			Height = 774,
+			Views = ordered() {
+				Main = MultiView {
+					Active = "Flow",
+					ViewList = ordered() {
+						Flow = "FlowView",
+						Console = "ConsoleView",
+						Timeline = "TimelineView",
+						Spline = "SplineEditorView",
+						Info = "InfoView",
+						Chat = "ChatView"
+					},
+					Flow = FlowView {
+						Flags = {
+							Navigator = true,
+							AutoHideNavigator = true,
+							ConnectedSnap = true,
+							PipesAlways = true,
+							AutoSnap = true,
+							FullIndicator = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Vertical",
+						PipeStyle = "Direct",
+						Scale = 0.719467,
+						Offset = { -780.948, 210.057 }
+					},
+					Timeline = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 150, Bottom = 343 },
+							ScaleX = 0.426705653021443,
+							OffsetX = 990.81052631579,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = false,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "frame"
+						},
+						Spreadsheet = { LeftPos = 150, Visible = false }
+					},
+					Spline = SplineEditorView {
+						LeftPos = 256,
+						ScaleX = 0.2,
+						ScaleY = 0.00338983050847458,
+						OffsetX = 1047.2,
+						OffsetY = 0,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = false,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = false,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					},
+				},
+				Controls = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Left = "PreviewContainer",
+				Right = "PreviewContainer",
+				Transport = "TransportView",
+				Time = "TimeView"
+			},
+			Layout = {
+				Rows = 2,
+				RatioX = 1,
+				RatioY = 1,
+				{
+					Columns = 2,
+					RatioX = 1,
+					RatioY = 0.514954486345904,
+					{ ID = "Left", RatioX = 0.501231527093596, RatioY = 0.0101010101010101, Pop = true },
+					{ ID = "Right", RatioX = 0.498768472906404, Pop = true },
+					Pop = true
+				},
+				{
+					Columns = 2,
+					RatioY = 0.485045513654096,
+					{
+						Rows = 2,
+						RatioX = 0.576354679802956,
+						RatioY = 0.0107238605898123,
+						{ ID = "Main", RatioX = 1, RatioY = 0.843243243243243, Pop = true },
+						{ ID = "Time", SnapY = 56, Flat = true },
+						Pop = true
+					},
+					{
+						Rows = 2,
+						PixelX = 342,
+						{ ID = "Controls", RatioX = 1, RatioY = 1 },
+						{ ID = "Transport", FixedY = -2 }
+					}
+				}
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Auto = false
+				},
+				BackgroundRender = true,
+			},
+			AutoSave = {
+				Delay = 120,
+			},
+			Memory = {
+				FramesAtOnce = 4,
+				Render = {
+					SimultaneousBranching = true
+				},
+				Interactive = {
+					SimultaneousBranching = true,
+				}
+			},
+			NumberStyles = {
+				ClipFrame = 2
+			},
+			Views = {
+				Right = {
+					Viewer = {
+						EnableLUTs = true,
+						LUTPlugin = "OCIOColorSpaceViewLUT",
+						ScaleMode = 1,
+						LUTSelected = "OCIO ColorSpace ViewLUT",
+					},
+					BgColor = 4278190080,
+					View3D = {
+						SortMethod = "QuickBSP",
+						CamFront = {
+							Rotation = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CamLeft = {
+							Rotation = {
+								Y = 90,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						Options = {
+							Lighting = false,
+							Shadows = false,
+							Wireframe = false,
+							Grid = false,
+						},
+						CamPersp = {
+							Rotation = {
+								Y = -364,
+								X = 10.6000022888184,
+								Z = 0
+							},
+							Scale = 1.16070413589478,
+							Position = {
+								Y = 0.302862107753754,
+								X = -0.129675433039665,
+								Z = -0.114737756550312
+							}
+						},
+						CamRight = {
+							Rotation = {
+								Y = -90,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CamTop = {
+							Rotation = {
+								Y = 0,
+								X = 90,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CameraName = "Perspective"
+					},
+					ViewLUT = {
+						{
+							Tools = ordered() {
+								OCIOColorSpaceViewLUT = ViewOperator {
+									NameSet = true,
+									Inputs = {
+										OutputSpace = Input { Value = FuID { "Output - Rec.709" } },
+										Look = Input { Value = FuID { "None" } },
+										SourceSpace = Input { Value = FuID { "ACES - ACEScg" } }
+									},
+									CtrlWZoom = false
+								}
+							},
+							ID = "OCIOColorSpaceViewLUT"
+						},
+						Recent = {
+							SelectedPlugin = "OCIOColorSpaceViewLUT",
+							FusionViewLUT = {
+								Tools = ordered() {
+									FusionViewLUT = ViewLUTOp {
+										NameSet = true,
+										Inputs = {
+										}
+									}
+								}
+							},
+							SelectedName = "OCIO ColorSpace ViewLUT"
+						},
+						SelectedName = "OCIO ColorSpace ViewLUT",
+						SelectedPlugin = "OCIOColorSpaceViewLUT"
+					},
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						ViewLUT = {
+							{
+								Tools = ordered() {
+									OCIOColorSpaceViewLUT1 = ViewOperator {
+										NameSet = true,
+										Inputs = {
+											OutputSpace = Input { Value = FuID { "Output - Rec.709" } },
+											Look = Input { Value = FuID { "None" } },
+											SourceSpace = Input { Value = FuID { "ACES - ACEScg" } }
+										},
+										CtrlWZoom = false
+									}
+								},
+								ID = "OCIOColorSpaceViewLUT"
+							},
+							SelectedPlugin = "OCIOColorSpaceViewLUT",
+							SelectedName = "OCIO ColorSpace ViewLUT",
+							Recent = {
+								SelectedPlugin = "OCIOColorSpaceViewLUT",
+								FusionViewLUT = {
+									Tools = ordered() {
+										FusionViewLUT = ViewLUTOp {
+											NameSet = true,
+											Inputs = {
+											}
+										}
+									}
+								},
+								SelectedName = "OCIO ColorSpace ViewLUT"
+							}
+						},
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = true,
+							FitMarginY = 0,
+							LUTPlugin = "OCIOColorSpaceViewLUT",
+							LUTSelected = "OCIO ColorSpace ViewLUT",
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					},
+					Toolbar = {
+						Style = 0,
+						Size = 0
+					},
+					OpToolbar = {
+						Style = 0,
+						Size = 1
+					},
+				},
+				Left = {
+					Viewer = {
+						LUTPlugin = "OCIOColorSpaceViewLUT",
+						Normalise = true,
+						LUTSelected = "OCIO ColorSpace ViewLUT",
+						Channel = 4294967295,
+						CheckerUnderlay = false,
+						ScaleMode = 1,
+						Smooth = false
+					},
+					Toolbar = {
+						Style = 0,
+						Size = 0
+					},
+					SubView = {
+						Enabled = false,
+						Navigator = false,
+						Magnifier = false,
+						ID = "GL3DHistogramViewer",
+						GL3DHistogramViewer = {
+							AutoBounds = false,
+							Layout = { -326, 15, -15, 298 }
+						},
+						["3DHistogram"] = {
+							Proxy = 2,
+							DrawStyles = 1
+						},
+						GLHistogramViewer = {
+							AutoBounds = true
+						}
+					},
+					QuadView = false,
+					ViewLUT = {
+						{
+							Tools = ordered() {
+								OCIOColorSpaceViewLUT = ViewOperator {
+									NameSet = true,
+									Inputs = {
+										OutputSpace = Input { Value = FuID { "Output - Rec.709" } },
+										Look = Input { Value = FuID { "None" } },
+										SourceSpace = Input { Value = FuID { "ACES - ACEScg" } }
+									},
+									CtrlWZoom = false
+								}
+							},
+							ID = "OCIOColorSpaceViewLUT"
+						},
+						Recent = {
+							SelectedPlugin = "OCIOColorSpaceViewLUT",
+							FusionViewLUT = {
+								Tools = ordered() {
+									FusionViewLUT = ViewLUTOp {
+										NameSet = true,
+										Inputs = {
+										}
+									}
+								}
+							},
+							SelectedName = "OCIO ColorSpace ViewLUT"
+						},
+						SelectedName = "OCIO ColorSpace ViewLUT",
+						SelectedPlugin = "OCIOColorSpaceViewLUT"
+					},
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = false,
+							LUTPlugin = "FusionViewLUT",
+							FitMarginY = 0,
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					},
+					View1 = {
+						Viewer = {
+							ID = "GLImageViewer"
+						}
+					},
+					OpToolbar = {
+						Style = 0,
+						Size = 1
+					},
+				},
+				View1 = {
+					PrevCtrlInactiveColor = 0,
+					PickW = 1,
+					SideB = {
+						PrevCtrlInactiveColor = 4278255360,
+						PickW = 1,
+						PickH = 1,
+						PrevCtrlActiveColor = 4278190335,
+						Viewer = {
+							EnableLUTs = false,
+							LUTPlugin = "FusionViewLUT",
+							FitMarginY = 0,
+							FitMarginX = 0,
+							FitMarginType = 0,
+							FarZ = -1000,
+							NearZ = 0
+						}
+					},
+					BgColor = 4278190080,
+					FullScreen = false,
+					PrevCtrlActiveColor = 0,
+					PickH = 1,
+					AlwaysOnTop = true,
+					View3D = {
+						CamLeft = {
+							Rotation = {
+								Y = 90,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CamRight = {
+							Rotation = {
+								Y = -90,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						Options = {
+							Shadows = false
+						},
+						SortMethod = "QuickBSP",
+						CamTop = {
+							Rotation = {
+								Y = 0,
+								X = 90,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CamPersp = {
+							Rotation = {
+								Y = -70.2000045776367,
+								X = -3.99999952316284,
+								Z = 0
+							},
+							Scale = 2.1810154914856,
+							Position = {
+								Y = 0.270705103874207,
+								X = -0.196485325694084,
+								Z = -0.200589492917061
+							}
+						},
+						CamFront = {
+							Rotation = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							},
+							Scale = 1,
+							Position = {
+								Y = 0,
+								X = 0,
+								Z = 0
+							}
+						},
+						CameraName = "Perspective"
+					}
+				},
+			},
+			FrameFormat = {
+				Rate = 24,
+				GuideRatio = 1.77777777777778,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+				DepthLoader = 1,
+				AspectLoader = 1
+			},
+			LastFile = "/mnt/skog/video/gopro/natur_tur/GH010840.MP4",
+			Unsorted = {
+				GlobalStart = 1001,
+				GlobalEnd = 1200
+			},
+			Paths = {
+			},
+			FlowView = {
+				Direction = 1,
+				ConnectedSnap = true,
+				PipesOnTop = true,
+				FullToolIndicator = true,
+			},
+			QuickTime = {
+			},
+		}
+	}
+}
+
+ 
